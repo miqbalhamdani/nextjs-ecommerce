@@ -1,7 +1,13 @@
+import About from "../components/homepage/About";
+import FeaturedProducts from "../components/common/FeaturedProducts";
+import Hero from "../components/homepage/Hero";
+
 export default function Home() {
   return (
-    <div className="container">
-      <h1 className="text-center m-5">Next Commerce</h1>
-    </div>
+    <>
+      <Hero />
+      <About />
+      <FeaturedProducts />
+    </>
   )
 }
