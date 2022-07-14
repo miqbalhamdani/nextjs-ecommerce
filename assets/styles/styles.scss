@@ -1,0 +1,8 @@
+$theme-colors: (
+  primary: #7971ea,
+);
+
+@import "bootstrap/scss/bootstrap.scss";
+@import "./theme.scss";
+@import "./icomoon.scss";
+@import "./custom.scss";
