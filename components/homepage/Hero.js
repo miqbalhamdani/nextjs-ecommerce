@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Hero() {
@@ -13,9 +14,11 @@ export default function Hero() {
                 Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.{" "}
               </p>
               <p>
-                <a href="#" className="btn btn-sm btn-primary">
-                  Shop Now
-                </a>
+                <Link href="/shop">
+                  <a className="btn btn-sm btn-primary">
+                    Shop Now
+                  </a>
+                </Link>
               </p>
             </div>
           </div>

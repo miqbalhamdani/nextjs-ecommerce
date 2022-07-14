@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function CartTotal() {
@@ -29,12 +30,11 @@ export default function CartTotal() {
 
           <div className="row">
             <div className="col-md-12">
-              <button
-                className="btn btn-primary btn-lg py-3 btn-block"
-                onClick="window.location='checkout.html'"
-              >
-                Proceed To Checkout
-              </button>
+              <Link href="\checkout">
+                <button className="btn btn-primary btn-lg py-3 btn-block">
+                  Proceed To Checkout
+                </button>
+              </Link>
             </div>
           </div>
         </div>

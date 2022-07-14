@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import InputQty from "../ui/InputQty";
 
@@ -25,9 +26,11 @@ export default function DetailDescription() {
       </div>
 
       <p>
-        <a href="cart.html" className="buy-now btn btn-sm btn-primary">
-          Add To Cart
-        </a>
+        <Link href="/cart">
+          <a className="buy-now btn btn-sm btn-primary">
+            Add To Cart
+          </a>
+        </Link>
       </p>
     </div>
   );

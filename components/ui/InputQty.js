@@ -21,6 +21,7 @@ export default function InputQty() {
             placeholder=""
             aria-label="Example text with button addon"
             aria-describedby="button-addon1"
+            style={{ height: 'auto' }}
           />
           <div className="input-group-append">
             <button
