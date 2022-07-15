@@ -123,10 +123,7 @@ export default function OrderDetail() {
 
             <div className="form-group">
               <Link href="/thank-you">
-                <button
-                  className="btn btn-primary btn-lg py-3 btn-block"
-                  onClick="window.location='thankyou.html'"
-                >
+                <button className="btn btn-primary btn-lg py-3 btn-block">
                   Place Order
                 </button>
               </Link>
