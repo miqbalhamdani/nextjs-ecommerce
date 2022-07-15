@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function ApplyPromo() {
@@ -5,9 +6,11 @@ export default function ApplyPromo() {
     <div className="col-md-6">
       <div className="row mb-5">
         <div className="col-md-6">
-          <button className="btn btn-outline-primary btn-sm btn-block">
-            Continue Shopping
-          </button>
+          <Link href="/shop">
+            <button className="btn btn-outline-primary btn-sm btn-block">
+              Continue Shopping
+            </button>
+          </Link>
         </div>
       </div>
       <div className="row">

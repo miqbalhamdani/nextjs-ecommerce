@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductItem from "./ProductItem";
+import PRODUCT_DUMMY from "../../json/products.json";
 
 export default function FeaturedProducts() {
+  const [products, setProducts] = useState(PRODUCT_DUMMY);
+
+  const filteredProduct = () => {
+    return products.slice(0, 3);
+  };
+
   return (
     <div className="site-section block-3 site-blocks-2 bg-light">
       <div className="container">
@@ -12,8 +19,8 @@ export default function FeaturedProducts() {
         </div>
 
         <div className="row mt-5">
-          {[...Array(3)].map((_, i) => (
-            <ProductItem key={i} />
+          {filteredProduct().map((product, i) => (
+            <ProductItem product={product} key={i} />
           ))}
         </div>
       </div>

@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Breadcrumb from "../../components/common/Breadcrumb";
 import ProductList from '../../components/shop-list/ProductList'
 import Sort from '../../components/shop-list/Sort'
 import Pagination from '../../components/shop-list/Pagination'
 import Filter from '../../components/shop-list/Filter/Filter'
 
-export default function shop() {
+import PRODUCT_DUMMY from '../../json/products.json';
+
+export default function Shop() {
+  const [products, setProducts] = useState(PRODUCT_DUMMY);
+
+  const filteredProduct = () => {
+    return products.slice(0, 10);
+  };
+
   return (
     <div className="site-wrap">
       <Breadcrumb />
@@ -16,7 +24,7 @@ export default function shop() {
           <div className="row mb-5">
             <div className="col-md-9 order-2">
               <Sort />
-              <ProductList />
+              <ProductList products={filteredProduct()} />
               <Pagination />
             </div>
 

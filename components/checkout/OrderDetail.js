@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function OrderDetail() {
@@ -121,12 +122,11 @@ export default function OrderDetail() {
             </div>
 
             <div className="form-group">
-              <button
-                className="btn btn-primary btn-lg py-3 btn-block"
-                onClick="window.location='thankyou.html'"
-              >
-                Place Order
-              </button>
+              <Link href="/thank-you">
+                <button className="btn btn-primary btn-lg py-3 btn-block">
+                  Place Order
+                </button>
+              </Link>
             </div>
           </div>
         </div>

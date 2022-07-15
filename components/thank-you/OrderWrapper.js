@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function OrderWrapper(props) {
@@ -12,9 +13,11 @@ export default function OrderWrapper(props) {
       {props.children}
 
       <p className="mt-5 text-center">
-        <a href="shop.html" className="btn btn-sm btn-primary">
-          Back to shop
-        </a>
+        <Link href="/shop">
+          <a className="btn btn-sm btn-primary">
+            Back to shop
+          </a>
+        </Link>
       </p>
     </div>
   );
