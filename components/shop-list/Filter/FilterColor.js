@@ -1,9 +1,9 @@
 import React from "react";
 import FilterCard from "./FilterCard";
 
-export default function FilterSize() {
+export default function FilterColor() {
   return (
-    <FilterCard title="Size">
+    <FilterCard title="Color">
       <label htmlFor="s_sm" className="d-flex">
         <input type="checkbox" id="s_sm" className="me-2 mt-1" />{" "}
         <span className="text-black">Small (2,319)</span>
