@@ -1,15 +1,24 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+import React, { useState } from "react";
 
 export default function InputQty() {
+  const [qty, setQty] = useState(1);
+
+  const addQty = () => {
+    setQty(qty+1);
+  }
+
+  const removeQty = () => {
+    if (qty === 1) return;
+    setQty(qty-1);
+  }
+
   return (
     <div className="input-group mb-3" style={{ maxWidth: '120px' }}>
           <div className="input-group-prepend">
             <button
               className="btn btn-outline-primary"
               type="button"
+              onClick={removeQty}
             >
               -
             </button>
@@ -17,16 +26,14 @@ export default function InputQty() {
           <input
             type="text"
             className="form-control text-center"
-            value="1"
-            placeholder=""
-            aria-label="Example text with button addon"
-            aria-describedby="button-addon1"
+            value={qty}
             style={{ height: 'auto' }}
           />
           <div className="input-group-append">
             <button
               className="btn btn-outline-primary"
               type="button"
+              onClick={addQty}
             >
               +
             </button>

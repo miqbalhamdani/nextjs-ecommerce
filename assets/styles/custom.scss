@@ -24,6 +24,10 @@ a {
   height: 43px;
 }
 
+textarea.form-control {
+  height: auto;
+}
+
 .text-success {
   color: #28a745!important;
 }

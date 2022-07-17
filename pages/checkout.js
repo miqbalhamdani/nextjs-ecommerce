@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import Breadcrumb from "../components/common/Breadcrumb";
-import OrderForm from '../components/checkout/OrderForm';
-import OrderDetail from '../components/checkout/OrderDetail';
+import OrderForm from "../components/checkout/OrderForm";
+import Coupon from "../components/checkout/Coupon";
+import OrderDetail from "../components/checkout/OrderDetail";
 
 export default function checkout() {
   return (
@@ -12,10 +13,13 @@ export default function checkout() {
         <div className="container">
           <div className="row mb-5">
             <OrderForm />
-            <OrderDetail />
+            <div className="col-md-6">
+              <Coupon />
+              <OrderDetail />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

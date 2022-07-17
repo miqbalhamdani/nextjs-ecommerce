@@ -10,7 +10,7 @@ export default function ProductItem(props) {
     overflow: "hidden",
     textOverflow: "ellipsis",
     display: "-webkit-box",
-    "-webkit-line-clamp": "2",
+    WebkitLineClamp: "2",
     lineClamp: "2",
     "-webkit-box-orient": "vertical",
   };
