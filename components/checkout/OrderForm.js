@@ -35,20 +35,6 @@ export default function OrderForm() {
 
         <div className="form-group row mb-3">
           <div className="col-md-12">
-            <label htmlFor="c_companyname" className="text-black mb-2">
-              Company Name{" "}
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="c_companyname"
-              name="c_companyname"
-            />
-          </div>
-        </div>
-
-        <div className="form-group row mb-3">
-          <div className="col-md-12">
             <label htmlFor="c_address" className="text-black mb-2">
               Address <span className="text-danger">*</span>
             </label>
@@ -71,18 +57,19 @@ export default function OrderForm() {
         </div>
 
         <div className="form-group row mb-3">
-          <div className="col-md-6">
-            <label htmlFor="c_state_country" className="text-black mb-2">
-              State / Country <span className="text-danger">*</span>
+          <div className="col-md-8">
+            <label htmlFor="c_phone" className="text-black mb-2">
+              Phone <span className="text-danger">*</span>
             </label>
             <input
               type="text"
               className="form-control"
-              id="c_state_country"
-              name="c_state_country"
+              id="c_phone"
+              name="c_phone"
+              placeholder="Phone Number"
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-4">
             <label htmlFor="c_postal_zip" className="text-black mb-2">
               Posta / Zip <span className="text-danger">*</span>
             </label>
@@ -96,7 +83,7 @@ export default function OrderForm() {
         </div>
 
         <div className="form-group row mb-3">
-          <div className="col-md-6">
+          <div className="col-md-12">
             <label htmlFor="c_email_address" className="text-black mb-2">
               Email Address <span className="text-danger">*</span>
             </label>
@@ -105,18 +92,6 @@ export default function OrderForm() {
               className="form-control"
               id="c_email_address"
               name="c_email_address"
-            />
-          </div>
-          <div className="col-md-6">
-            <label htmlFor="c_phone" className="text-black mb-2">
-              Phone <span className="text-danger">*</span>
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="c_phone"
-              name="c_phone"
-              placeholder="Phone Number"
             />
           </div>
         </div>

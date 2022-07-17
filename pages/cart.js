@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumb from "../components/common/Breadcrumb";
-import ApplyPromo from '../components/cart/ApplyPromo';
+import CartUpdate from '../components/cart/CartUpdate';
 import CartTable from '../components/cart/CartTable';
 import CartTotal from '../components/cart/CartTotal';
 
@@ -16,7 +16,7 @@ export default function cart() {
           </div>
 
           <div className="row">
-            <ApplyPromo />
+            <CartUpdate />
             <CartTotal />
           </div>
         </div>
