@@ -12,7 +12,7 @@ export default function ProductItem(props) {
     display: "-webkit-box",
     WebkitLineClamp: "2",
     lineClamp: "2",
-    "-webkit-box-orient": "vertical",
+    WebkitBoxOrient: "vertical",
   };
 
   const price = () => {
