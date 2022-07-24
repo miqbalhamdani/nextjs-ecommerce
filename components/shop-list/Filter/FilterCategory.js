@@ -1,26 +1,24 @@
+import Link from "next/link";
 import React from "react";
 import FilterCard from "./FilterCard";
 
-export default function FilterCategory() {
+export default function FilterCategory(props) {
+  const categoryItem = (category) => (
+    <li className="mb-1">
+      <Link href={`/shop?category=${category.name}`}>
+        <a className="d-flex">
+          <span className="text-capitalize">{category.name}</span>
+          <span className="text-black ms-auto">({category.qty})</span>
+        </a>
+      </Link>
+    </li>
+  );
+
   return (
     <FilterCard title="Categories">
       <ul className="list-unstyled mb-0">
-        <li className="mb-1">
-          <a href="#" className="d-flex">
-            <span>Men</span> <span className="text-black ms-auto">(2,220)</span>
-          </a>
-        </li>
-        <li className="mb-1">
-          <a href="#" className="d-flex">
-            <span>Women</span> <span className="text-black ms-auto">(2,550)</span>
-          </a>
-        </li>
-        <li className="mb-1">
-          <a href="#" className="d-flex">
-            <span>Children</span>{" "}
-            <span className="text-black ms-auto">(2,124)</span>
-          </a>
-        </li>
+        {props.categories.length &&
+          props.categories.map((category) => categoryItem(category))}
       </ul>
     </FilterCard>
   );

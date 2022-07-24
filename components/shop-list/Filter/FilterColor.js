@@ -1,21 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import FilterCard from "./FilterCard";
 
-export default function FilterColor() {
+export default function FilterColor(props) {
+  const [color, setColor] = useState([]);
+
+  const setFilterColor = (event) => {
+    if (event.target.checked) {
+      setColor((prev) => {
+        const newColor = [...prev, event.target.value];
+
+        props.changeFilterColor(newColor);
+        return newColor;
+      });
+    } else {
+      const index = color.indexOf(event.target.value);
+
+      setColor((prev) => {
+        const newColor = [...prev];
+        newColor.splice(index, 1);
+
+        props.changeFilterColor(newColor);
+        return newColor;
+      });
+    }
+
+  };
+
+  const colorItem = (color, index) => (
+    <label htmlFor={`color-${color.name}`} className="d-flex" key={index}>
+      <input
+        type="checkbox"
+        id={`color-${color.name}`}
+        className="me-2 mt-1"
+        value={color.name}
+        onChange={setFilterColor}
+      />{" "}
+      <span className="text-black text-capitalize">
+        {color.name} ({color.qty})
+      </span>
+    </label>
+  );
+
   return (
     <FilterCard title="Color">
-      <label htmlFor="s_sm" className="d-flex">
-        <input type="checkbox" id="s_sm" className="me-2 mt-1" />{" "}
-        <span className="text-black">Small (2,319)</span>
-      </label>
-      <label htmlFor="s_md" className="d-flex">
-        <input type="checkbox" id="s_md" className="me-2 mt-1" />{" "}
-        <span className="text-black">Medium (1,282)</span>
-      </label>
-      <label htmlFor="s_lg" className="d-flex">
-        <input type="checkbox" id="s_lg" className="me-2 mt-1" />{" "}
-        <span className="text-black">Large (1,392)</span>
-      </label>
+      {props.colors.length &&
+        props.colors.map((color, index) => colorItem(color, index))}
     </FilterCard>
   );
 }

@@ -6,7 +6,7 @@ import InputQty from "../ui/InputQty";
 export default function DetailDescription({product}) {
   return (
     <div className="col-md-6">
-      <h2 className="text-black">{product.name}</h2>
+      <h2 className="text-black">{product.title}</h2>
       <p>{product.description}</p>
 
       <p>
