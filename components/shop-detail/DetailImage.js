@@ -10,7 +10,7 @@ export default function DetailImage(props) {
         height={500}
         layout="responsive"
         alt="Image"
-        class="img-fluid"
+        className="img-fluid"
       />
     </div>
   );
