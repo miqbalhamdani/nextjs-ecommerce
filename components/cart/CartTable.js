@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CartItem from "./CartItem";
 
-export default function CartTable() {
+export default function CartTable(props) {
+  const emtpyItem = () => (
+    <tr>
+      <td colSpan={6} style={{ fontWeight: "700" }}>
+        NO ITEMS
+      </td>
+    </tr>
+  );
+
   return (
     <div className="site-blocks-table">
       <table className="table table-bordered">
@@ -16,7 +24,15 @@ export default function CartTable() {
           </tr>
         </thead>
         <tbody>
-          <CartItem />
+          {props.carts.length
+            ? props.carts.map((cart, index) => (
+                <CartItem
+                  cart={cart}
+                  key={index}
+                  removeCart={props.removeCart}
+                />
+              ))
+            : emtpyItem()}
         </tbody>
       </table>
     </div>

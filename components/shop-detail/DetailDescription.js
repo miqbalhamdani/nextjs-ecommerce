@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { formatRupiah } from "../../utils";
@@ -42,10 +41,7 @@ export default function DetailDescription({ product }) {
           qty: productQty,
         };
 
-        localStorage.setItem(
-          "NC_CARTS",
-          JSON.stringify([...carts, cart])
-        );
+        localStorage.setItem("NC_CARTS", JSON.stringify([...carts, cart]));
       }
     }
 
@@ -64,7 +60,7 @@ export default function DetailDescription({ product }) {
       </p>
 
       <div className="mb-5">
-        <InputQty onChange={(total) => setProductQty(total)} />
+        <InputQty qty={productQty} onChange={(total) => setProductQty(total)} />
       </div>
 
       <p>

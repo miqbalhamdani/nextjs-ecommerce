@@ -11,7 +11,9 @@ a {
 .btn {
   color: #fff;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     color: #fff;
   }
 }
