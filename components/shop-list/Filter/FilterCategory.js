@@ -3,8 +3,8 @@ import React from "react";
 import FilterCard from "./FilterCard";
 
 export default function FilterCategory(props) {
-  const categoryItem = (category) => (
-    <li className="mb-1">
+  const categoryItem = (category, index) => (
+    <li key={index} className="mb-1">
       <Link href={`/shop?category=${category.name}`}>
         <a className="d-flex">
           <span className="text-capitalize">{category.name}</span>
@@ -18,7 +18,9 @@ export default function FilterCategory(props) {
     <FilterCard title="Categories">
       <ul className="list-unstyled mb-0">
         {props.categories.length &&
-          props.categories.map((category) => categoryItem(category))}
+          props.categories.map((category, index) =>
+            categoryItem(category, index)
+          )}
       </ul>
     </FilterCard>
   );

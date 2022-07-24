@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "H&M - Oxford shirt Muscle Fit",
     "description": "Shirt in stretch Oxford cotton with a button-down collar, classic front and a yoke and darts at the back. Long sleeves with adjustable buttoning at the cuffs, and a rounded hem. Muscle Fit â a fitdesigned to showcase the bodyâs physique with narrow shoulders and tapered sleeves to create a flattering silhouette.",
     "category": "men",
@@ -9,6 +10,7 @@
     "slug": "handm-oxford-shirt-muscle-fit"
   },
   {
+    "id": 2,
     "title": "H&M Regular Fit Overshirt",
     "description": "Overshirt in cotton twill with a collar, classic front and yoke at the back. Open chest pockets, long sleeves with a sleeve placket and buttoned cuffs, and a rounded hem.",
     "category": "men",
@@ -18,6 +20,7 @@
     "slug": "handm-regular-fit-overshirt"
   },
   {
+    "id": 3,
     "title": "H&M Regular Fit Flannel shirt",
     "description": "Checked shirt in soft cotton flannel with a turn-down collar, classic front, yoke at the back and open chest pockets. Long sleeves with buttoned cuffs and a sleeve placket with a link button. Roundedhem. Regular Fit â a classic fit with good room for movement and a gently tapered waist to create a comfortable, tailored silhouette.",
     "category": "men",
@@ -27,6 +30,7 @@
     "slug": "handm-regular-fit-flannel-shirt"
   },
   {
+    "id": 4,
     "title": "H&M Regular Fit Short-sleeved shirt",
     "description": "Short-sleeved shirt in a cotton weave with a turn-down collar, classic front and yoke at the back. Open chest pocket and rounded hem. Regular Fit â a classic fit with good room for movement and agently tapered waist to create a comfortable, tailored silhouette.",
     "category": "men",
@@ -36,6 +40,7 @@
     "slug": "handm-regular-fit-short-sleeved-shirt"
   },
   {
+    "id": 5,
     "title": "H&M Hoodie",
     "description": "Hoodie in soft sweatshirt fabric with a lined, drawstring hood, dropped shoulders, long sleeves and ribbing at the cuffs and hem. Soft brushed inside.",
     "category": "woman",
@@ -45,6 +50,7 @@
     "slug": "handm-hoodie"
   },
   {
+    "id": 6,
     "title": "H&M Wide joggers",
     "description": "Wide joggers in lightweight sweatshirt fabric. High waist with elasticated smocking, and large patch front pockets.",
     "category": "woman",
@@ -54,6 +60,7 @@
     "slug": "handm-wide-joggers"
   },
   {
+    "id": 7,
     "title": "H&M Rib-knit dress",
     "description": "Sleeveless, calf-length dress in a fine rib knit with shaping sections. Deep V-neck front and back and a high slit in one side with buttons.",
     "category": "woman",
@@ -63,6 +70,7 @@
     "slug": "handm-rib-knit-dress"
   },
   {
+    "id": 8,
     "title": "H&M Tie-detail blouse",
     "description": "Short blouse in lightweight twill with a collar and buttons down the front. Dropped shoulders, long sleeves and an opening with ties at the back of the hem.",
     "category": "woman",
@@ -72,6 +80,7 @@
     "slug": "handm-tie-detail-blouse"
   },
   {
+    "id": 9,
     "title": "Nike Big Kids' Sportswear T-Shirt",
     "description": "Kaos kasual detail swoosh logo ikonik untuk athleisure look, Warna pink, Material katun tidak transparan, ringan dan tidak stretch, Kerah bulat",
     "category": "children",
@@ -81,6 +90,7 @@
     "slug": "nike-big-kids-sportswear-t-shirt"
   },
   {
+    "id": 10,
     "title": "H&M 5-pack cotton T-shirts",
     "description": "T-shirts in soft organic cotton jersey with a round neck and straight-cut hem.",
     "category": "children",
@@ -90,6 +100,7 @@
     "slug": "handm-5-pack-cotton-t-shirts"
   },
   {
+    "id": 11,
     "title": "H&M Zip-through hoodie",
     "description": "Zip-through hoodie made from sweatshirt fabric with a soft brushed inside. Jersey-lined hood and a concealed zip down the front. Kangaroo pockets to keep hands warm or store small items, and ribbingat the cuffs and hem.",
     "category": "children",
@@ -99,6 +110,7 @@
     "slug": "handm-zip-through-hoodie"
   },
   {
+    "id": 12,
     "title": "H&M 2-piece set",
     "description": "Set with a top and pair of joggers in lightweight sweatshirt fabric made from a cotton blend. Long-sleeved sweatshirt with ribbing around the neckline, cuffs and hem. Joggers with an elasticated,drawstring waist, side pockets and elasticated hems.",
     "category": "children",
@@ -108,6 +120,7 @@
     "slug": "handm-2-piece-set"
   },
   {
+    "id": 13,
     "title": "H&M 2-piece cotton set",
     "description": "Set with a top and skirt in cotton. Top in jersey with flutter sleeves. Skirt in woven fabric with an elasticated waist, gathered seam at the hips and a scalloped hem with a broderie anglaise trim.",
     "category": "children",

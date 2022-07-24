@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 
-export default function InputQty() {
+export default function InputQty(props) {
   const [qty, setQty] = useState(1);
 
   const addQty = () => {
-    setQty(qty + 1);
+    const total = qty + 1;
+
+    setQty(total);
+    props.onChange(total);
   };
 
   const removeQty = () => {
     if (qty === 1) return;
-    setQty(qty - 1);
+
+    const total = qty - 1;
+
+    setQty(total);
+    props.onChange(total);
   };
 
   return (
