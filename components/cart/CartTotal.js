@@ -29,6 +29,7 @@ export default function CartTotal(props) {
   });
 
   const proceedToCheckout = () => {
+    localStorage.removeItem("NC_CARTS");
     localStorage.setItem("NC_ORDER", JSON.stringify(orderData()));
     router.push("/checkout");
   };

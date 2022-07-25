@@ -1,7 +1,14 @@
-import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/router";
 
 export default function OrderWrapper(props) {
+  const router = useRouter();
+
+  const backToShop = () => {
+    localStorage.removeItem("NC_ORDER");
+    router.push("/shop");
+  };
+
   return (
     <div className="col-md-12">
       <div className="text-center">
@@ -13,11 +20,9 @@ export default function OrderWrapper(props) {
       {props.children}
 
       <p className="mt-5 text-center">
-        <Link href="/shop">
-          <a className="btn btn-sm btn-primary">
-            Back to shop
-          </a>
-        </Link>
+        <a onClick={backToShop} className="btn btn-sm btn-primary">
+          Back to shop
+        </a>
       </p>
     </div>
   );

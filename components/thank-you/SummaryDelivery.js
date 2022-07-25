@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 
-export default function SummaryDelivery() {
+export default function SummaryDelivery({contact}) {
   const style = {
     borderBottom: "0.5rem solid #dee2e6 !important",
   };
@@ -12,19 +12,15 @@ export default function SummaryDelivery() {
         <tbody>
           <tr>
             <td style={{ width: "30%" }}>Name</td>
-            <td>Mister Aladin</td>
+            <td>{contact.name}</td>
           </tr>
           <tr>
             <td>Address</td>
-            <td>
-              iNews Center, Jl. Kebon Sirih No.17-19, RT.15/RW.7, Kb. Sirih,
-              Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta
-              10340
-            </td>
+            <td>{contact.address}</td>
           </tr>
           <tr>
             <td>Phone</td>
-            <td>(021) 39836900</td>
+            <td>{contact.phone}</td>
           </tr>
         </tbody>
       </Table>
