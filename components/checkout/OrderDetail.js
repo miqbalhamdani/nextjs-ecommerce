@@ -1,8 +1,17 @@
-import Link from "next/link";
 import React from "react";
+import { formatRupiah } from "../../utils";
 import Payment from "./Payment";
 
-export default function OrderDetail() {
+export default function OrderDetail(props) {
+  const OrderItem = (product, index) => (
+    <tr key={index}>
+      <td>
+        {product.title} <strong className="mx-2">x</strong> {product.qty}
+      </td>
+      <td className="text-end">{formatRupiah(product.price * product.qty)}</td>
+    </tr>
+  );
+
   return (
     <div className="row mb-5">
       <div className="col-md-12">
@@ -17,30 +26,26 @@ export default function OrderDetail() {
             </thead>
 
             <tbody>
-              <tr>
-                <td>
-                  Top Up T-Shirt <strong className="mx-2">x</strong> 1
-                </td>
-                <td>$250.00</td>
-              </tr>
-              <tr>
-                <td>
-                  Polo Shirt <strong className="mx-2">x</strong> 1
-                </td>
-                <td>$100.00</td>
-              </tr>
+              {props.products.length &&
+                props.products.map((product, index) =>
+                  OrderItem(product, index)
+                )}
+
               <tr>
                 <td className="text-black font-weight-bold">
                   <strong>Cart Subtotal</strong>
                 </td>
-                <td className="text-black">$350.00</td>
+                <td className="text-black text-end">
+                  {formatRupiah(props.subtotal)}
+                </td>
               </tr>
+
               <tr>
                 <td className="text-black font-weight-bold">
                   <strong>Order Total</strong>
                 </td>
-                <td className="text-black font-weight-bold">
-                  <strong>$350.00</strong>
+                <td className="text-black text-end font-weight-bold">
+                  <strong>{formatRupiah(props.total)}</strong>
                 </td>
               </tr>
             </tbody>
@@ -49,11 +54,12 @@ export default function OrderDetail() {
           <Payment />
 
           <div className="form-group">
-            <Link href="/thank-you">
-              <button className="btn btn-primary btn-lg py-3 btn-block">
-                Place Order
-              </button>
-            </Link>
+            <button
+              onClick={() => props.onSubmit()}
+              className="btn btn-primary btn-lg py-3 btn-block"
+            >
+              Place Order
+            </button>
           </div>
         </div>
       </div>
