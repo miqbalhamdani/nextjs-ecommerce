@@ -5,7 +5,7 @@ import Payment from "./Payment";
 export default function OrderDetail(props) {
   const OrderItem = (product, index) => (
     <tr key={index}>
-      <td>
+      <td data-testid="product-items">
         {product.title} <strong className="mx-2">x</strong> {product.qty}
       </td>
       <td className="text-end">{formatRupiah(product.price * product.qty)}</td>
@@ -35,7 +35,11 @@ export default function OrderDetail(props) {
                 <td className="text-black font-weight-bold">
                   <strong>Cart Subtotal</strong>
                 </td>
-                <td className="text-black text-end">
+
+                <td
+                  className="text-black text-end"
+                  data-testid="product-subtotal-price"
+                >
                   {formatRupiah(props.subtotal)}
                 </td>
               </tr>
